@@ -1,0 +1,190 @@
+
+Escola de Idiomas
+Entidades e Atributos
+Aluno
+PK: id_aluno
+nome
+email
+telefone
+Curso
+PK: id_curso
+nome
+carga_horaria
+
+Professor
+PK: id_professor
+nome
+especialidade
+Aula
+PK: id_aula
+data
+conteudo
+FK: id_curso
+Presença
+PK: id_presenca
+status
+FK: id_aluno
+FK: id_aula
+Matrícula (entidade associativa)
+PK: id_matricula
+FK: id_aluno
+FK: id_curso
+
+Clínica Veterinária
+Entidades e Atributos
+Cliente
+PK: id_cliente
+nome
+telefone
+endereco
+Animal
+PK: id_animal
+nome
+especie
+raca
+idade
+FK: id_cliente
+Veterinário
+PK: id_veterinario
+nome
+especialidade
+Consulta
+PK: id_consulta
+data
+diagnostico
+tratamento
+FK: id_animal
+FK: id_veterinario
+
+Biblioteca Comunitária
+Entidades e Atributos
+Usuário
+PK: id_usuario
+nome
+telefone
+email
+Livro
+PK: id_livro
+titulo
+autor
+ano_publicacao
+Empréstimo
+PK: id_emprestimo
+data_retirada
+data_prevista_devolucao
+data_devolucao
+FK: id_usuario
+FK: id_livro
+
+Lanchonete Delivery
+Entidades e Atributos
+Cliente
+PK: id_cliente
+nome
+telefone
+endereco
+Pedido
+PK: id_pedido
+data
+valor_total
+FK: id_cliente
+FK: id_entregador
+Item_Pedido
+PK: id_item
+quantidade
+subtotal
+FK: id_pedido
+FK: id_produto
+Cardápio (Produto)
+PK: id_produto
+nome
+preco
+categoria
+Entregador
+PK: id_entregador
+nome
+telefone
+
+Sistema de Streaming
+Entidades e Atributos
+Usuário
+PK: id_usuario
+nome
+email
+plano
+Conteúdo
+PK: id_conteudo
+titulo
+genero
+ano
+tipo
+Favorito
+PK: id_favorito
+data_adicao
+FK: id_usuario
+FK: id_conteudo
+Histórico
+PK: id_historico
+data_visualizacao
+FK: id_usuario
+FK: id_conteudo
+
+Hospital Universitário
+Entidades e Atributos
+Paciente
+PK: id_paciente
+nome
+data_nascimento
+endereco
+Médico
+PK: id_medico
+nome
+especialidade
+Internação
+PK: id_internacao
+data_entrada
+data_saida
+FK: id_paciente
+Consulta
+PK: id_consulta
+data
+observacoes
+FK: id_paciente
+FK: id_medico
+Exame
+PK: id_exame
+tipo
+resultado
+data
+FK: id_consulta
+
+Festival Musical
+Entidades e Atributos
+Artista
+PK: id_artista
+nome
+genero_musical
+Palco
+PK: id_palco
+nome
+capacidade
+localizacao
+FK: id_evento
+Evento
+PK: id_evento
+nome
+data
+Ingresso
+PK: id_ingresso
+tipo
+preco
+FK: id_evento
+Apresentação (entidade associativa)
+PK: id_apresentacao
+horario_inicio
+horario_fim
+FK: id_artista
+FK: id_palco
+
+
+
